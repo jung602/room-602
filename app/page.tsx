@@ -1,7 +1,4 @@
-'use client'
-
 import Image from 'next/image'
-import Link from 'next/link'
 import './globals.css'
 import sassy from './sassy.module.scss'
 import React, { useRef, useState } from "react";
