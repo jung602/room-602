@@ -2,9 +2,12 @@
   "name": "room-602",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jung602.github.io/room-602/",
   "scripts": {
+  "predeploy": "npm run build",
+  "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
