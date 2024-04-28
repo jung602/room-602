@@ -54,20 +54,3 @@
     @media (max-width: 652px) {
     }
 }
-// sassy.module.scss 파일
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 0.2s ease-out forwards;
-  }
-  
-  .fade-in-delayed {
-    opacity: 0;
-    animation: fadeIn 0.2s ease-out 0.1s forwards;
-  }
-  
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-  

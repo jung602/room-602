@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import './globals.css'
 import sassy from './sassy.module.scss'
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { MagneticTabs } from './components/menu'
 
  
