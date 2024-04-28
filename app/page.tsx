@@ -21,7 +21,7 @@ export default function Home() {
            <div>
             <div className={sassy.image}>
            <Image
-              src="/boundary.png"
+              src="./boundary.png"
               width={32}
               height={32}
               alt="Comming Soon"
