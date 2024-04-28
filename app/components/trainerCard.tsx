@@ -66,7 +66,7 @@ const handleMouseLeave = () => {
        className={`${styles.image} ${isActive ? styles.active : ''}`}
       />
       <div className={styles.title}>
-        <Image src="/pokeball.png" alt="icon" width={100} height={100} className={styles.icon} />
+        <Image src="./pokeball.png" alt="icon" width={100} height={100} className={styles.icon} />
         <div className={styles.text}>Trainer Card</div>
       </div>
       <div className={`${styles.infos} ${isActive ? styles.infoActive : ''}`}>
@@ -84,17 +84,17 @@ const handleMouseLeave = () => {
         <div className={styles.infocontent}>
           <div className={`${styles.subtext} ${sfMid.className}`}>Partners</div>
           <div className={styles.pokes}>
-          <Image src="/dark1.png" alt="icon" width={100} height={100} className={styles.icon} />
-          <Image src="/dark2.png" alt="icon" width={100} height={100} className={styles.icon} />
-          <Image src="/dark3.png" alt="icon" width={100} height={100} className={styles.icon} />
-          <Image src="/dark4.png" alt="icon" width={100} height={100} className={styles.icon} />
-          <Image src="/dark5.png" alt="icon" width={100} height={100} className={styles.icon} />
-          <Image src="/dark6.png" alt="icon" width={100} height={100} className={styles.icon} />
+          <Image src="./dark1.png" alt="icon" width={100} height={100} className={styles.icon} />
+          <Image src="./dark2.png" alt="icon" width={100} height={100} className={styles.icon} />
+          <Image src="./dark3.png" alt="icon" width={100} height={100} className={styles.icon} />
+          <Image src="./dark4.png" alt="icon" width={100} height={100} className={styles.icon} />
+          <Image src="./dark5.png" alt="icon" width={100} height={100} className={styles.icon} />
+          <Image src="./dark6.png" alt="icon" width={100} height={100} className={styles.icon} />
           </div>
         </div>
 
       </div>
-      <Image src="/dark.png" alt="icon" width={100} height={100} className={styles.symbols} />
+      <Image src="./dark.png" alt="icon" width={100} height={100} className={styles.symbols} />
     </div>
     </div>
   );

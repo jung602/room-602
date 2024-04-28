@@ -26,7 +26,7 @@ const PngSequenceAnimation: React.FC<PngSequenceProps> = ({isActive, className})
     }, [frame, isActive]);
   
     const formattedFrame = frame.toString().padStart(5, '0');
-    const imagePath = `/trainerCard/TrainerCard${formattedFrame}.png`;
+    const imagePath = `./trainerCard/TrainerCard${formattedFrame}.png`;
   
     return (
         <img className={className} src={imagePath} alt={`Frame ${frame}`} />
