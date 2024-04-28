@@ -1,0 +1,72 @@
+
+.main{
+    cursor: url(/cursor.svg) 32 32, auto;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1);
+    overflow: hidden;
+    text-align: center;
+    scrollbar-width: none; /* 스크롤바를 숨김 */
+    -ms-overflow-style: none; /* 스크롤바를 숨김 */
+}
+
+.main::-webkit-scrollbar {
+    display: none; /* 스크롤바 자체를 비표시 */
+  }
+
+
+.image{
+    opacity: 70%;
+}
+
+
+.top {
+    white-space: nowrap;
+    position: fixed;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #b1aba480;
+
+    @media (max-width: 652px) {
+        span {
+            display: block;
+        }
+    }
+}
+
+.contents {
+    height: calc(100vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom {
+    white-space: nowrap;
+    position: fixed;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #b1aba480;
+
+    @media (max-width: 652px) {
+    }
+}
+// sassy.module.scss 파일
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.2s ease-out forwards;
+  }
+  
+  .fade-in-delayed {
+    opacity: 0;
+    animation: fadeIn 0.2s ease-out 0.1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  

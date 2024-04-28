@@ -1,0 +1,101 @@
+.box{
+    max-width: 100%;
+    position: relative;
+    overflow: visible;
+    transition: all 1s ease-in-out;
+    height: auto;
+}
+
+.grid{
+
+    margin: 2rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.container{
+    width: 98%;
+    transform: rotate(-1.2deg);
+    transition: all 0.2s;
+    word-break: normal;
+    z-index: 100000;
+    text-shadow: none;
+    text-align: left;
+
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    
+    background-color: #fafafa20;
+    border: solid 1px #fafafa40;
+    box-shadow: 0px 20px 30px #ffa7a660;
+    backdrop-filter: blur(10px); /* 블러 효과 적용 */
+  -webkit-backdrop-filter: blur(10px); /* 사파리 및 구버전 크롬 대응 */
+
+    a {
+        text-decoration: none;
+        color: #4F2829;
+    }
+    .innerContainer{
+        padding: 1rem;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        position: relative;
+    }
+
+    .number{
+        width: fit-content;
+        height: fit-content;
+        line-height: 1rem;
+        font-size: 1rem;
+        padding: .5rem .75rem;
+        background-color: #4F282970;
+        color: white;
+        border-radius: 10000px;
+    }
+
+    @media (max-width: 652px) {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+
+        .innerContainer{
+            .number{
+                padding: .25rem .5rem;
+                font-size: .8rem;
+            }
+        }
+      }
+    
+    @media (max-width: 464px) {
+        font-size: 1rem;
+        line-height: 1rem;
+
+       }
+
+}
+
+.container:nth-child(2){
+    z-index: 99999;
+    transform: rotateZ(1deg);
+}
+.container:nth-child(3){
+    z-index: 99998;
+    transform: rotateZ(-1.2deg);
+}
+.container:nth-child(4){
+    z-index: 99997;
+    transform: rotateZ(1.2deg);
+}
+
+
+.container:hover{
+    background-color: #fafafa80;
+    border: solid 1px #ffffff70;
+    z-index: 100001;
+    transform: rotateZ(0);
+}

@@ -1,0 +1,260 @@
+
+
+ .button1{
+    z-index: 999;
+    transform: rotate(-5deg);
+    transition: all 0.2s;
+
+    &.active {
+      transform: rotate(0deg);
+    }
+  }
+
+  .button2{
+    z-index: 999;
+    transform: rotate(2deg);
+    &.active {
+      
+      transform: rotate(0deg);
+    }
+  }
+
+  .button3{
+    z-index: 999;
+    transform: rotate(-4deg);
+    &.active {
+      z-index: 999;
+      transform: none;
+    }
+  }
+
+  .button4{
+    z-index: 999;
+    transform: rotate(4deg);
+    &.active {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .tab{
+    text-align: center;
+    &.active {
+      padding-bottom: 2rem;
+    }
+  }
+
+
+  .magnetictab {
+    text-align: center;
+    background: none;
+
+/** 탭 설정*/
+
+      .tabbackground {
+        z-index: 999;
+        cursor: url(/pointer.svg) 32 32, auto;
+        width: fit-content;
+        height: 100%;
+        display: inline-block;
+        border-radius: 32px;
+        padding: 16px 24px;
+        z-index: -10;
+        transition: opacity 0.2s; // transition-opacity in Tailwind
+
+
+        @media (max-width: 660px) {
+          border-radius: 20px;
+          padding: 14px 20px;
+         }
+
+         @media (max-width: 350px) {
+          border-radius: 14px;
+          padding: 14px
+
+         }
+      }
+
+/** 개별 탭들의 컬러 및 폰트 설정*/
+
+      .firstTab {
+
+        box-shadow: inset -2px -2px 4px #4F282910, inset 2px 2px 3px rgba(255, 255, 255, 0.5), inset 1px 1px 1px #4F282910, 0px 20px 30px #ffa7a660;
+        background: linear-gradient(170deg, #FFA7A6 100%, #FFB7B8 100%);
+
+        .tabtext {
+          font-size: 92px;
+          text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 0px black;
+          color: #4F2829; // text-zinc-600 in Tailwind
+          transition: all 0.2s; // transition-colors in Tailwind
+
+          @media (min-width: 1920px) {
+            font-size: 5vw;
+            
+           }
+
+           @media (max-width: 652px) {
+            font-size: 62px;
+            line-height: 64px;
+             width: 280px;
+          }
+
+
+          @media (max-width: 464px) {
+            font-size: 48px;
+            line-height: 48px;
+            width: 210px;
+           }
+
+
+          @media (max-width: 350px) {
+            font-size: 40px;
+            line-height: 40px;
+            width: 180px;
+           }
+
+
+
+        }
+      }
+      .secondTab {
+        box-shadow: inset -2px -2px 4px #080d2910, inset 2px 2px 3px rgba(255, 255, 255, 0.5), inset 1px 1px 1px #080d2910, 0px 20px 40px rgba(0, 163.2, 255, 0.35);
+        background: linear-gradient(170deg, #00a3ff 70%, rgb(60, 202, 248) 100%);
+
+        .tabtext {
+          font-size: 92px;
+          text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 0px black;
+          color: #00285c; // text-zinc-600 in Tailwind
+          white-space: normal;
+          transition: all 0.2s; // transition-colors in Tailwind
+
+          @media (min-width: 1920px) {
+            font-size: 5vw;
+           }
+
+
+          @media (max-width: 1035px) {
+            width: 565px;
+            font-size: 92px;
+            line-height: 92px;
+           }
+
+           @media (max-width: 652px) {
+            white-space: normal;
+            font-size: 64px;
+            line-height: 64px;
+            width: 394px;
+           }
+
+          @media (max-width: 464px) {
+            white-space: normal;
+            font-size: 48px;
+            line-height: 48px;
+            width: 294px;
+           }
+
+          @media (max-width: 350px) {
+            white-space: normal;
+            font-size: 40px;
+            line-height: 40px;
+            width: 245px;
+           }
+
+        }
+      }
+      .thirdTab {
+        box-shadow: inset -2px -2px 4px #6B1D0320, inset 2px 2px 3px rgba(255, 255, 255, 0.5), inset 1px 1px 1px #6B1D0310, 0px 20px 40px #ff5b2550;
+        background: linear-gradient(170deg, #FF5A25 70%, #FE774D 100%);
+        
+        .tabtext {
+          font-size: 92px;
+          white-space: normal;
+          text-shadow: 1.5px 1.5px 2px rgba(255, 255, 255, 0.3), -1px -1px 0px #461302;
+          color: #6B1D03; // text-zinc-600 in Tailwind
+          transition: all 0.2s; // transition-colors in Tailwind
+
+          @media (min-width: 1920px) {
+            font-size: 5vw;
+           }
+
+
+          @media (max-width: 771px) {
+            line-height: 92px;
+            width: 396px;
+           }
+
+           @media (max-width: 652px) {
+            white-space: normal;
+            font-size: 64px;
+            line-height: 64px;
+            width: 275px;
+           }
+          
+           @media (max-width: 464px) {
+            font-size: 48px;
+            line-height: 48px;
+            white-space: normal;
+            width: 208px;
+           }
+
+           @media (max-width: 350px) {
+            white-space: normal;
+            font-size: 40px;
+            line-height: 40px;
+            width: 172px;
+           }
+
+
+
+        }
+      }
+      .fourthTab {
+        box-shadow: inset -2px -2px 4px #4B350110, inset 2px 2px 3px rgba(255, 255, 255, 0.5), inset 1px 1px 1px #4B350110, 0px 20px 30px #FAC02B50;
+        background: linear-gradient(170deg, #FAC02B 70%, #FAC747 100%);
+
+        .tabtext {
+          font-size: 92px;
+          text-shadow: 1.5px 1.5px 2px rgba(255, 255, 255, 0.3), -1px -1px 0px black;
+          color: #4B3501; // text-zinc-600 in Tailwind
+          transition: all 0.2s; // transition-colors in Tailwind
+
+          @media (min-width: 1920px) {
+            font-size: 5vw;
+           }
+           
+           @media (max-width: 652px) {
+            font-size: 64px;
+            line-height: 64px;
+          }
+
+          @media (max-width: 464px) {
+            font-size: 48px;
+            line-height: 48px;
+           }
+
+           @media (max-width: 350px) {
+            font-size: 40px;
+            line-height: 40px;
+           }
+
+
+        }
+      }
+
+    }
+
+
+ .tabContent {
+        z-index: 1005;
+        margin-top: 0;
+        transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        overflow-y: hidden;
+        width: 100%;
+        max-width: 100%;
+        max-height: 0; // 기본 상태는 접혀있음
+
+
+    &.active {
+      overflow-y: visible;
+    }
+
+    }

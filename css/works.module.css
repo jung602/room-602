@@ -1,0 +1,153 @@
+.body {
+  padding-top: 3rem;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+.projects .project {
+  perspective: 3000px;
+  perspective-origin: 50% 0;
+  position: relative;
+  min-height: 50vh;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+  transform-origin: bottom;
+}
+.projects .project:hover .gridContainer {
+  color: #f5f5f5;
+  transform-origin: bottom;
+  transform: rotateX(-40deg);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+.projects .project:hover .folderImg {
+  transform-origin: bottom;
+  transform: rotateX(-30deg);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+.projects .project:hover .folderImg2 {
+  transform-origin: bottom;
+  transform: rotateX(-20deg);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+.projects .project.open {
+  height: 200vh;
+}
+.projects .project.open .gridContainer {
+  color: #f5f5f5;
+  max-width: 100%;
+  transition: all 0.5s ease-in-out;
+  transform: rotateX(0deg);
+}
+.projects .project.open .folderImg {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+.projects .project.open .folderImg2 {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+.projects .project.open .folderImg3 {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+.projects .project .projectDetails {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background-color: blue;
+}
+
+.gridContainer {
+  background-color: #232323;
+  width: 50vw;
+  height: 50vh;
+  align-items: center;
+  color: #1d1c1c;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  z-index: 100;
+  transform-origin: bottom;
+  transform: rotateX(0deg);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+  border-radius: 0.5rem;
+}
+
+.folderImg {
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  height: 50vh;
+  width: calc(100vw - 2rem);
+  transform-origin: bottom;
+  transform: rotateX(0deg);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+  max-width: 100%;
+  background-image: url("/roro.jpg");
+  z-index: 10;
+}
+
+.folderImg2 {
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  height: 50vh;
+  width: calc(100vw - 2rem);
+  transform-origin: bottom;
+  transform: rotateX(0deg);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+  max-width: 100%;
+  background: red;
+  z-index: 9;
+}
+
+.folderImg3 {
+  border-radius: 0.5rem;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  width: calc(100vw - 2rem);
+  transform-origin: bottom;
+  transform: rotateX(0deg);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+  max-width: 100%;
+  background: blueviolet;
+  z-index: 8;
+}
+
+.count {
+  vertical-align: super;
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
+
+.link {
+  border-bottom: 1px solid 10;
+}
+
+.link:hover {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-bottom: 1px solid 10;
+  border-color: #FF4D40;
+}
+
+.link:visited {
+  color: #232323;
+}
+
+.subText {
+  color: #1d1c1c;
+}/*# sourceMappingURL=works.module.css.map */
