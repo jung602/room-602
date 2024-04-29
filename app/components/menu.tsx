@@ -5,7 +5,6 @@ import Contact from './contact';
 import Skills from "./skills";
 import ThreeDCard from "./trainerCard";
 
-
   interface TabItem {
     id: number;
     text: string;
@@ -19,6 +18,11 @@ import ThreeDCard from "./trainerCard";
     setActiveTabId: (id: number | null) => void;
   }
 
+
+  function isMobileDevice() {
+    const ua = navigator.userAgent;
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+  }
   
   const MagneticTab = ({ item, isActive, toggleTab }: MagneticTabProps) => {
     const ref = useRef<HTMLButtonElement>(null);
@@ -86,16 +90,25 @@ import ThreeDCard from "./trainerCard";
       }, [isActive]);
     
 
-      const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
-        // isActive가 true면 이벤트 처리 중단, 즉 탭 컨텐츠가 활성화된 상태에서는 마우스 움직임을 추적하지 않음
+      const handleMouseMove: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+        if (isMobileDevice()) return;
         if (isClicked || isActive) return;
     
-        const { clientX, clientY, currentTarget } = e;
-        const { left, top, width, height } = currentTarget.getBoundingClientRect();
-        const x = (clientX - left - width / 2) * 0.15;
-        const y = (clientY - top - height / 2) * 0.15;
+        const { clientX, clientY } = e;
+        const rect = e.currentTarget.getBoundingClientRect();
+        const x = (clientX - rect.left - rect.width / 2) * 0.15;
+        const y = (clientY - rect.top - rect.height / 2) * 0.15;
         setHoverPosition({ x, y, opacity: 1 });
     };
+      
+
+      useEffect(() => {
+        document.addEventListener('mousemove', handleMouseMove as unknown as EventListener);
+        return () => {
+          document.removeEventListener('mousemove', handleMouseMove as unknown as EventListener);
+        };
+      }, []);
+      
 
     const handleThreeDCardToggle = (isActive: boolean) => {
       setIsCardActiveInThreeDCard(isActive); // ThreeDCard 내부의 카드 상태에 따라 상태 업데이트
