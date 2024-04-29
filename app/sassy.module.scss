@@ -1,6 +1,9 @@
 
 .main{
+    width: calc(100vw);
     height: calc(100vh);
+    height: -webkit-fill-available;
+    height: fill-available;
     cursor: url(/cursor.svg) 32 32, auto;
     transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1);
     overflow: hidden;
