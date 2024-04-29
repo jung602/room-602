@@ -46,7 +46,7 @@ const SkillItem: React.FC<SkillItemProps> = ({ skill }) => {
   };
 
   return (
-    <div className={`${styles.container} ${isVisible ? styles.containerClick : ''}`} onMouseEnter={toggleVisibility} onMouseLeave={toggleVisibility}>
+    <div className={`${styles.container} ${isVisible ? styles.containerClick : ''}`} onClick={toggleVisibility}>
      <div className={styles.innerContainer}>
       <Image src={skill.img} alt={skill.text} width={100} height={100} className={styles.icon} />
       <div className={styles.number}>0{skill.id}</div> 
