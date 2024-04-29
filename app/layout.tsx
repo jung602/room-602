@@ -12,7 +12,7 @@ const sfRounded = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Room 602',
+  title: 'Room602',
   description: 'Virtual Designer Based in Seoul',
 }
 
