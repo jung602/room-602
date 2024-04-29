@@ -126,12 +126,12 @@
       font-size: 1rem;
     }
     .subtext{
-      font-size: .5rem;
-      line-height: .7em;
+      font-size: .8rem;
+      line-height: .8em;
       padding: .5rem 0 .5rem .5rem;
     }
     .maintext{
-      font-size: .7rem;
+      font-size: 1rem;
       line-height: 1em;
       padding: .5rem .5rem .5rem 0;
     }
@@ -272,6 +272,7 @@
     }
 
     @media (max-width: 652px) {
+      width: 70%;
       border-radius: 16px;
     }
 
