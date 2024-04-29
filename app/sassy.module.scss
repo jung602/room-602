@@ -10,6 +10,9 @@
     text-align: center;
     scrollbar-width: none; /* 스크롤바를 숨김 */
     -ms-overflow-style: none; /* 스크롤바를 숨김 */
+    @supports (-webkit-touch-callout: none) {
+        height: 100dvh;
+      }
 }
 
 .main::-webkit-scrollbar {
