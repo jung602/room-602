@@ -1,18 +1,13 @@
 
 .main{
     width: calc(100vw);
-    height: calc(100vh);
-    height: -webkit-fill-available;
-    height: fill-available;
-    cursor: url(/cursor.svg) 32 32, auto;
+    cursor: url(./cursor.png) 32 32, auto;
     transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1);
     overflow: hidden;
     text-align: center;
     scrollbar-width: none; /* 스크롤바를 숨김 */
     -ms-overflow-style: none; /* 스크롤바를 숨김 */
-    @supports (-webkit-touch-callout: none) {
-        height: 100dvh;
-      }
+
 }
 
 .main::-webkit-scrollbar {
@@ -43,6 +38,11 @@
 
 .contents {
     height: calc(100vh);
+    height: -webkit-fill-available;
+    height: fill-available;
+    @supports (-webkit-touch-callout: none) {
+        height: 100dvh;
+      }
     display: flex;
     justify-content: center;
     align-items: center;
