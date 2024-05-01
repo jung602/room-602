@@ -71,16 +71,16 @@
         }
 
         .adds{
-            font-size: 1rem;
+            font-size: .8rem;
 
             .tools{
                 .textbox {
                     .tooltext{
-                        font-size: .8rem;
+                        display: none;
                     }
                 }
                 .toolLogo{
-                    width: 1.8rem;
+                    width: 1rem;
                 }
             }
         }
