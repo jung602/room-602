@@ -178,6 +178,9 @@ import ThreeDCard from "./trainerCard";
                 </div>
             </button>
         </div>
+        <div 
+        className={`${styles.back} ${isActive ? styles.active : ''}`}
+        onClick={handleClick}></div>
       </>
     );
   };
