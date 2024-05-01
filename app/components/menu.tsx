@@ -177,11 +177,10 @@ import ThreeDCard from "./trainerCard";
                       </div>
                 </div>
             </button>
-            <div 
+        </div>
+        <div 
             className={`${styles.back} ${isActive ? styles.active : ''}`}
             onClick={handleClick}></div>
-        </div>
-
       </>
     );
   };
@@ -208,6 +207,7 @@ export const MagneticTabs: React.FC<{ setActiveTabId: (id: number | null) => voi
                   setActiveTabId={setActiveTabId} // 이제 prop 전달
               />
           ))}
+
       </div>
   );
 };
