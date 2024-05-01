@@ -7,8 +7,9 @@ interface PngSequenceProps {
 
 const PngSequenceAnimation: React.FC<PngSequenceProps> = ({ isActive, className }) => {
     const [frame, setFrame] = useState<number>(30);
-    const frameRef = useRef<number>(frame);
-    frameRef.current = frame; // 현재 프레임을 ref에 저장
+    const frameRef = useRef(frame);
+    const animationRef = useRef<number>();
+
     const numFrames = 60; // 총 프레임 수
 
     // 이미지 프리로딩
@@ -26,22 +27,23 @@ const PngSequenceAnimation: React.FC<PngSequenceProps> = ({ isActive, className 
     useEffect(() => {
         const updateFrame = () => {
             if (isActive && frameRef.current < numFrames) {
-                setFrame(frameRef.current + 1);
+                setFrame(f => f + 1);
             } else if (!isActive && frameRef.current > 30) {
-                setFrame(frameRef.current - 1);
+                setFrame(f => f - 1);
             }
+
+            frameRef.current = frame; // 현재 프레임을 ref에 저장
+            animationRef.current = requestAnimationFrame(updateFrame); // 다음 프레임을 요청
         };
 
-        let animationFrameId: number;
-        if ((isActive && frameRef.current < numFrames) || (!isActive && frameRef.current > 30)) {
-            animationFrameId = requestAnimationFrame(updateFrame);
+        if (isActive) {
+            animationRef.current = requestAnimationFrame(updateFrame);
+            return () => {
+                if (animationRef.current) {
+                    cancelAnimationFrame(animationRef.current);
+                }
+            };
         }
-
-        return () => {
-            if (animationFrameId !== undefined) {
-                cancelAnimationFrame(animationFrameId);
-            }
-        };
     }, [isActive]);
 
     const formattedFrame = frame.toString().padStart(5, '0');
