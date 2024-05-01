@@ -7,7 +7,7 @@ interface PngSequenceProps {
 
 const PngSequenceAnimation: React.FC<PngSequenceProps> = ({ isActive, className }) => {
     const [frame, setFrame] = useState<number>(30); // 초기 프레임 설정을 30으로 설정
-    const animationSpeed = 1000 / 30; // 30 FPS
+    const animationSpeed = 1000 / 15; // 30 FPS
 
     // 모든 이미지를 미리 로딩
     useEffect(() => {
