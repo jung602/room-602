@@ -260,7 +260,7 @@
     }
 
   .back{
-    z-index:-2;
+    z-index:-1;
     width: 0;
     height: 0;
     position: absolute;
@@ -271,7 +271,6 @@
     &.active {
       width: calc(100vw);
       height: calc(100vh);
-      opacity: 0;
     }
 
   }
