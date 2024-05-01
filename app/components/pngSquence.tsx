@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface PngSequenceProps {
     isActive: boolean;
@@ -6,35 +6,46 @@ interface PngSequenceProps {
 }
 
 const PngSequenceAnimation: React.FC<PngSequenceProps> = ({ isActive, className }) => {
-    const [frame, setFrame] = useState<number>(30); // 초기 프레임 설정을 30으로 설정
-    const animationSpeed = 1000 / 15; // 30 FPS
+    const [frame, setFrame] = useState<number>(30);
+    const frameRef = useRef<number>(frame);
+    frameRef.current = frame; // 현재 프레임을 ref에 저장
+    const numFrames = 60; // 총 프레임 수
 
-    // 모든 이미지를 미리 로딩
+    // 이미지 프리로딩
     useEffect(() => {
         const preloadedImages = [];
-        for (let i = 1; i <= 60; i++) {
+        for (let i = 1; i <= numFrames; i++) {
             const img = new Image();
             const frameNumber = i.toString().padStart(5, '0');
-            img.src = `./trainerCard/TrainerCard${frameNumber}.png?${new Date().getTime()}`; // 캐싱 방지를 위한 타임스탬프 추가
+            img.src = `./trainerCard/TrainerCard${frameNumber}.png`;
             preloadedImages.push(img);
         }
     }, []);
 
-    // 애니메이션을 위한 useEffect
+    // 애니메이션 효과
     useEffect(() => {
-        let animationFrameId: ReturnType<typeof setTimeout>;
+        const updateFrame = () => {
+            if (isActive && frameRef.current < numFrames) {
+                setFrame(frameRef.current + 1);
+            } else if (!isActive && frameRef.current > 30) {
+                setFrame(frameRef.current - 1);
+            }
+        };
 
-        if (isActive && frame < 60) {
-            animationFrameId = setTimeout(() => setFrame(frame + 1), animationSpeed);
-        } else if (!isActive && frame > 30) {
-            animationFrameId = setTimeout(() => setFrame(frame - 1), animationSpeed);
+        let animationFrameId: number;
+        if ((isActive && frameRef.current < numFrames) || (!isActive && frameRef.current > 30)) {
+            animationFrameId = requestAnimationFrame(updateFrame);
         }
 
-        return () => clearTimeout(animationFrameId);
-    }, [frame, isActive]);
+        return () => {
+            if (animationFrameId !== undefined) {
+                cancelAnimationFrame(animationFrameId);
+            }
+        };
+    }, [isActive]);
 
     const formattedFrame = frame.toString().padStart(5, '0');
-    const imagePath = `./trainerCard/TrainerCard${formattedFrame}.png?${new Date().getTime()}`; // 캐싱 방지를 위한 타임스탬프 추가
+    const imagePath = `./trainerCard/TrainerCard${formattedFrame}.png`;
 
     return (
         <img className={className} src={imagePath} alt={`Frame ${frame}`} />
