@@ -143,8 +143,7 @@ import ThreeDCard from "./trainerCard";
 
     return (
       <>
-        <div
-        className={`${buttonStyle} ${isActive ? styles.active : ''}`}>
+        <div className={`${buttonStyle} ${isActive ? styles.active : ''}`}>
             <button
                 ref={ref}
                 className={styles.magnetictab}
@@ -177,10 +176,11 @@ import ThreeDCard from "./trainerCard";
                       </div>
                 </div>
             </button>
-        </div>
-        <div 
+            <div 
             className={`${styles.back} ${isActive ? styles.active : ''}`}
             onClick={handleClick}></div>
+        </div>
+
       </>
     );
   };
@@ -207,7 +207,6 @@ export const MagneticTabs: React.FC<{ setActiveTabId: (id: number | null) => voi
                   setActiveTabId={setActiveTabId} // 이제 prop 전달
               />
           ))}
-
       </div>
   );
 };
