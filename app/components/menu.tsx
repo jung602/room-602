@@ -95,10 +95,13 @@ const MagneticTab = ({ item, isActive, toggleTab, setActiveTabId }: MagneticTabP
     setActiveTabId(isActive ? null : item.id);
   };
 
+  const buttonStyle = `${styles.tab} ${item.id === 1 ? styles.button1 : item.id === 2 ? styles.button2 : item.id === 3 ? styles.button3 : styles.button4}`;
+  const tabStyle = `${styles.tabbackground} ${item.id === 1 ? styles.firstTab : item.id === 2 ? styles.secondTab : item.id === 3 ? styles.thirdTab : styles.fourthTab}`;
+
   return (
-    <div className={`${styles.tab} ${isActive ? styles.active : ''}`}>
+    <div className={`${buttonStyle} ${isActive ? styles.active : ''}`}>
       <button ref={ref} className={styles.magnetictab} onMouseMove={handleMouseMove} onClick={handleClick}>
-        <div className={styles.tabbackground} style={{ transform: `translate(${hoverPosition.x}px, ${hoverPosition.y}px)`, opacity: hoverPosition.opacity }}>
+        <div className={tabStyle} style={{ transform: `translate(${hoverPosition.x}px, ${hoverPosition.y}px)`, opacity: hoverPosition.opacity }}>
           <div className={styles.tabtext}>
             {item.text}
             <div ref={contentRef} className={`${styles.tabContent} ${isActive ? styles.active : ''}`} style={{ maxHeight: isActive ? `${tabHeight}px` : '0' }}>
