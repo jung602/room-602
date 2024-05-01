@@ -101,6 +101,25 @@ import ThreeDCard from "./trainerCard";
         setHoverPosition({ x, y, opacity: 1 });
     };
       
+      useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+          if (ref.current && !ref.current.contains(event.target as Node)) {
+            setActiveTabId(null);  // 모든 탭을 비활성화
+          }
+        };
+    
+        // isActive 상태일 때만 리스너를 추가
+        if (isActive) {
+          document.addEventListener('mousedown', handleClickOutside);
+        } else {
+          document.removeEventListener('mousedown', handleClickOutside);
+        }
+    
+        // 컴포넌트 언마운트시 또는 isActive가 변경될 때 이벤트 리스너 제거
+        return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+        };
+      }, [isActive]);  // 의존성 배열에 isActive 추가
 
       useEffect(() => {
         document.addEventListener('mousemove', handleMouseMove as unknown as EventListener);
