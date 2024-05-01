@@ -47,12 +47,12 @@
   .magnetictab {
     text-align: center;
     background: none;
-
+    cursor: url("/room-602/pointer.svg") 32 32, auto;
 /** 탭 설정*/
 
       .tabbackground {
         z-index: 999;
-        cursor: url("/room-602/pointer.svg") 32 32, auto;
+
         width: fit-content;
         height: 100%;
         display: inline-block;
@@ -263,18 +263,15 @@
     z-index: 200;
     width: 0;
     height: 0;
-    transform: translateX(-50%) translateY(-50%);
     position: absolute;
     top:0;
     left:0;
     opacity: 0;
-    background-color: rgba(255, 0, 0, 0);
 
     &.active {
       width: calc(100vw);
       height: calc(100vh);
-      opacity: 1;
-      background-color: red;
+      opacity: 0;
     }
 
   }
