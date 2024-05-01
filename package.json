@@ -4,8 +4,8 @@
   "private": true,
   "homepage": "https://jung602.github.io/room-602/",
   "scripts": {
-  "predeploy": "npm run build",
-  "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles",
+    "predeploy": "npm run build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles",
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
@@ -27,6 +27,7 @@
     "postcss": "^8.4.32",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-loading-skeleton": "^3.4.0",
     "react-router-dom": "^6.21.1",
     "react-transition-group": "^4.4.5",
     "tailwindcss": "^3.4.0",
