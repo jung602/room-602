@@ -5,26 +5,14 @@ import './globals.css'
 import sassy from './sassy.module.scss'
 import React, { useState, useEffect } from "react";
 import { MagneticTabs } from './components/menu'
-import Loading from './loading';
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
   const [activeTabId, setActiveTabId] = useState<number | null>(null);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000); // 예시로 3초 후 로딩 완료로 설정
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <>
-      <main className={`${sassy.main} ${!isLoading ? 'fadeIn' : ''}`}>
-        {isLoading ? (
-          <Loading />
-        ) : (
-          <>
+      <main className={`${sassy.main}`}>
             <div className={sassy.top}>
               <div>
                 <div className={sassy.image}>
@@ -43,10 +31,8 @@ export default function Home() {
               <MagneticTabs setActiveTabId={setActiveTabId} />
             </div>
             <div className={sassy.bottom}>
-              <div>Copyright ©️ Erin Jung 2024</div>
+              <div>Copyright © Erin Jung 2024</div>
             </div>
-          </>
-        )}
       </main>
     </>
   );
