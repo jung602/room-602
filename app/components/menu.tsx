@@ -205,15 +205,15 @@ export const MagneticTabs: React.FC<{ setActiveTabId: (id: number | null) => voi
 
   return (
     <div>
-      {tabs.map((item) => (
-        <MagneticTab
-          key={item.id}
-          item={item}
-          isActive={item.id === activeTabId}
-          toggleTab={() => toggleTab(item.id)}
-          setActiveTabId={setActiveTabId}
-        />
-      ))}
+          {tabs.map((item) => (
+              <MagneticTab
+                  key={item.id}
+                  item={item}
+                  isActive={item.id === activeTabId}
+                  toggleTab={() => toggleTab(item.id)}
+                  setActiveTabId={setActiveTabId}
+              />
+          ))}
       <div 
         className={`${styles.back} ${activeTabId !== null ? styles.active : ''}`}
         onClick={closeTabs} // 배경 클릭 핸들러
