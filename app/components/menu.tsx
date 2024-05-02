@@ -176,9 +176,7 @@ import ThreeDCard from "./trainerCard";
                       </div>
                 </div>
             </button>
-            <div 
-            className={`${styles.back} ${isActive ? styles.active : ''}`}
-            onClick={handleClick}></div>
+
         </div>
 
       </>
@@ -195,6 +193,12 @@ export const MagneticTabs: React.FC<{ setActiveTabId: (id: number | null) => voi
     setActiveTabId(newActiveTabId);
   };
 
+  // 클릭 핸들러: 탭이 열려있는 경우 모든 탭을 닫습니다.
+  const handleClickOutsideTabs = () => {
+    if (activeTabId !== null) {
+      setActiveTabId(null);
+    }
+  };
 
   return (
       <div>
@@ -204,9 +208,12 @@ export const MagneticTabs: React.FC<{ setActiveTabId: (id: number | null) => voi
                   item={item}
                   isActive={item.id === activeTabId}
                   toggleTab={() => toggleTab(item.id)}
-                  setActiveTabId={setActiveTabId} // 이제 prop 전달
+                  setActiveTabId={setActiveTabId}
               />
           ))}
+        <div 
+            className={`${styles.back} ${activeTabId !== null ? styles.active : ''}`}
+            onClick={handleClickOutsideTabs}></div>
       </div>
   );
 };
