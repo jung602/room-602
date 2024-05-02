@@ -7,7 +7,7 @@ import localFont from 'next/font/local'
 const inter = Inter({ subsets: ['latin'] })
 
 const sfRounded = localFont({
-  src: '/SF-Pro-Rounded-Semibold.otf',
+  src: 'SF-Pro-Rounded-Semibold.otf',
   display: 'swap',
 })
 
