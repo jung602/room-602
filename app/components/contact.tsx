@@ -4,7 +4,7 @@ import styles from './contact.module.scss';
 import Image from 'next/image';
 
 const sfRegular = localFont({
-  src: './SF-Pro-Rounded-Semibold.otf',
+  src: '../components/SF-Pro-Rounded-Semibold.otf',
   display: 'swap',
 })
 
