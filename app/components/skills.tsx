@@ -4,12 +4,12 @@ import localFont from 'next/font/local';
 import Image from 'next/image';
 
 const sfRegular = localFont({
-  src: '/SF-Rounded-Regular.otf',
+  src: 'public/SF-Rounded-Regular.otf',
   display: 'swap',
 })
 
 const sfMid= localFont({
-  src: '/SF-Pro-Rounded-Medium.otf',
+  src: 'public/SF-Pro-Rounded-Medium.otf',
   display: 'swap',
 })
 
