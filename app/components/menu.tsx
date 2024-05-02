@@ -187,34 +187,38 @@ import ThreeDCard from "./trainerCard";
 export const MagneticTabs: React.FC<{ setActiveTabId: (id: number | null) => void }> = ({ setActiveTabId }) => {
   const [activeTabId, setActiveTabIdLocal] = useState<number | null>(null);
 
-  const toggleTab = (id: number) => {
-    const newActiveTabId = activeTabId === id ? null : id;
-    setActiveTabIdLocal(newActiveTabId);
-    setActiveTabId(newActiveTabId);
-  };
-
-  // 클릭 핸들러: 탭이 열려있는 경우 모든 탭을 닫습니다.
-  const handleClickOutsideTabs = () => {
-    if (activeTabId !== null) {
-      setActiveTabId(null);
+  // 탭 토글 함수
+  const toggleTab = (id: number | null) => {
+    if (activeTabId === id || id === null) {
+      setActiveTabIdLocal(null);
+      setActiveTabId(null); // 탭 닫기
+    } else {
+      setActiveTabIdLocal(id);
+      setActiveTabId(id); // 새 탭 열기
     }
   };
 
+  // 배경 클릭 시 모든 탭 닫기
+  const closeTabs = () => {
+    toggleTab(null); // null을 전달하여 모든 탭 닫기
+  };
+
   return (
-      <div>
-          {tabs.map((item) => (
-              <MagneticTab
-                  key={item.id}
-                  item={item}
-                  isActive={item.id === activeTabId}
-                  toggleTab={() => toggleTab(item.id)}
-                  setActiveTabId={setActiveTabId}
-              />
-          ))}
-        <div 
-            className={`${styles.back} ${activeTabId !== null ? styles.active : ''}`}
-            onClick={handleClickOutsideTabs}></div>
-      </div>
+    <div>
+      {tabs.map((item) => (
+        <MagneticTab
+          key={item.id}
+          item={item}
+          isActive={item.id === activeTabId}
+          toggleTab={() => toggleTab(item.id)}
+          setActiveTabId={setActiveTabId}
+        />
+      ))}
+      <div 
+        className={`${styles.back} ${activeTabId !== null ? styles.active : ''}`}
+        onClick={closeTabs} // 배경 클릭 핸들러
+      ></div>
+    </div>
   );
 };
 
