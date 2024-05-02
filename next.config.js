@@ -14,6 +14,6 @@ const nextConfig = {
 module.exports = {
   assetPrefix:
     process.env.NODE_ENV === "production"
-      ? "https://깃허브아이디.github.io/레파지토리이름"
+      ? "https://jung602.github.io/room-602"
       : "",
 };
