@@ -3,11 +3,11 @@ import localFont from 'next/font/local';
 import styles from './about.module.scss';
 
 const sfRegular = localFont({
-  src: 'public/SF-Pro-Rounded-Regular.otf',
+  src: `url('/SF-Pro-Rounded-Medium.otf')`,
   display: 'swap',
 })
 const sfMid= localFont({
-  src: 'public/SF-Pro-Rounded-Semibold.otf',
+  src: `url('/SF-Pro-Rounded-Semibold.otf')`,
   display: 'swap',
 })
 
