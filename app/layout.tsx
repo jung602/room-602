@@ -7,9 +7,9 @@ import localFont from 'next/font/local'
 const inter = Inter({ subsets: ['latin'] })
 
 const sfRounded = localFont({
-  src: "./fonts/Impact.ttf",
-  display: 'swap',
-  weight: '600',
+  src: "./fonts/SF-Rounded-SemiBold.woff2",
+  weight: "normal",
+  style: "normal",
 })
 
 export const metadata: Metadata = {
