@@ -38,7 +38,7 @@ body{
 @font-face {
   unicode-range: U+0000-00FF;
   font-family: 'sfRounded-Regular';
-  src: url("/fonts/SF-Rounded-Regular.woff2") format('woff2');
+  src: url("/SF-Rounded-Regular.woff2") format('woff2');
   font-display: swap;
   font-weight: 400;
 }
@@ -46,7 +46,7 @@ body{
 @font-face {
   unicode-range: U+0000-00FF;
   font-family: 'sfRounded-Medium';
-  src: url("/fonts/SF-Rounded-Medium.woff2") format('woff2');
+  src: url("/SF-Rounded-Medium.woff2") format('woff2');
   font-display: swap;
   font-weight: 500;
 }
@@ -54,7 +54,7 @@ body{
 @font-face {
   unicode-range: U+0000-00FF;
   font-family: 'sfRounded-SemiBold';
-  src: url("/fonts/SF-Rounded-SemiBold.woff2") format('woff2');
+  src: url("/SF-Rounded-SemiBold.woff2") format('woff2');
   font-display: swap;
   font-weight: 600;
 }
