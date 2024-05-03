@@ -4,7 +4,7 @@ import localFont from 'next/font/local';
 import Image from 'next/image';
 
 const sfRegular = localFont({
-  src: "./fonts/SF-Pro-Rounded-Regular.otf",
+  src: "./fonts/SF-Rounded-Regular.otf",
   display: 'swap',
 })
 
