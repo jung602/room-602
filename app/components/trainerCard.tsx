@@ -2,13 +2,7 @@ import React, { useRef, useState, MouseEvent } from 'react';
 import styles from './trainercard.module.scss';
 import Image from 'next/image';
 import PngSequenceAnimation from './pngSquence'
-import localFont from 'next/font/local';
 
-const sfMid= localFont({
-  src: "./fonts/SF-Rounded-SemiBold.woff2",
-  display: 'swap',
-  weight: '600'
-})
 
 
 interface ThreeDCardProps {
@@ -73,17 +67,17 @@ const handleMouseLeave = () => {
       <div className={`${styles.infos} ${isActive ? styles.infoActive : ''}`}>
         
         <div className={styles.infocontent}>
-          <div className={`${styles.subtext} ${sfMid.className}`}>Name</div>
+          <div className={`${styles.subtext} ${"Medium"}`}>Name</div>
           <div className={styles.maintext}>Milky</div>
         </div>
 
         <div className={styles.infocontent}>
-          <div className={`${styles.subtext} ${sfMid.className}`}>Adventure Started</div>
+          <div className={`${styles.subtext} ${"Medium"}`}>Adventure Started</div>
           <div className={styles.maintext}>May, 2007</div>
         </div>
 
         <div className={styles.infocontent}>
-          <div className={`${styles.subtext} ${sfMid.className}`}>Partners</div>
+          <div className={`${styles.subtext} ${"Medium"}`}>Partners</div>
           <div className={styles.pokes}>
           <Image src="./dark1.png" alt="icon" width={100} height={100} className={styles.icon} />
           <Image src="./dark2.png" alt="icon" width={100} height={100} className={styles.icon} />

@@ -1,19 +1,6 @@
 import React,  { useState } from 'react';
 import styles from './skills.module.scss';
-import localFont from 'next/font/local';
 import Image from 'next/image';
-
-const sfRegular = localFont({
-  src: "./fonts/SF-Rounded-Regular.woff2",
-  display: 'swap',
-  weight: '400'
-})
-
-const sfMid= localFont({
-  src: "./fonts/SF-Rounded-SemiBold.woff2",
-  display: 'swap',
-  weight: '600'
-})
 
 
 // Define a TypeScript interface for the skill
@@ -52,7 +39,7 @@ const SkillItem: React.FC<SkillItemProps> = ({ skill }) => {
      <div className={styles.innerContainer}>
       <Image src={skill.img} alt={skill.text} width={100} height={100} className={styles.icon} />
       <div className={styles.number}>0{skill.id}</div> 
-      <div className={`${styles.content} ${sfMid.className}`}>{skill.text}</div> 
+      <div className={`${styles.content} ${"Medium"}`}>{skill.text}</div> 
 
       {isVisible && (
           <div className={styles.adds}>
@@ -75,7 +62,7 @@ const SkillItem: React.FC<SkillItemProps> = ({ skill }) => {
 
 const Skills: React.FC = () => { 
   return (
-    <div className={`${styles.box} ${sfRegular.className}`}>
+    <div className={`${styles.box} ${"Regular"}`}>
       <div className={styles.grid}>
         {skills.map((skill) => (
           <SkillItem key={skill.id} skill={skill} />

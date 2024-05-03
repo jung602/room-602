@@ -31,8 +31,24 @@ section {
 }
 
 body{
+
   cursor: url("/cursor.svg") 32 32, auto;
   background-color:#E5E5E5;
+}
+
+.Regular{
+  font-family: var(--font-sfRounded);
+  font-weight: 400;
+}
+
+.Medium{
+  font-family: var(--font-sfRounded);
+  font-weight: 500;
+}
+
+.Semibold{
+  font-family: var(--font-sfRounded);
+  font-weight: 600;
 }
 
 ol,

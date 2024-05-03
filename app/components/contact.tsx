@@ -3,11 +3,6 @@ import localFont from 'next/font/local';
 import styles from './contact.module.scss';
 import Image from 'next/image';
 
-const sfRegular = localFont({
-  src: "./fonts/SF-Rounded-SemiBold.woff2",
-  display: 'swap',
-  weight: '600',
-})
 
 interface Contact {
   id: number;
@@ -47,7 +42,7 @@ const contacts: Contact[] = [
 
 const Contact: React.FC = () => { 
   return (
-    <div className={`${styles.box} ${sfRegular.className}`}>
+    <div className={`${styles.box} ${"Regular"}`}>
       <div className={styles.grid}>
         {contacts.map((contact) => (
           <ContactItem key={contact.id} contact={contact} />

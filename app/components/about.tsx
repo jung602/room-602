@@ -1,17 +1,6 @@
 import React, { useState } from 'react';
-import localFont from 'next/font/local';
 import styles from './about.module.scss';
 
-const sfRegular = localFont({
-  src: "./fonts/SF-Rounded-Medium.woff2",
-  display: 'swap',
-  weight: '500',
-})
-const sfMid= localFont({
-  src: "./fonts/SF-Rounded-SemiBold.woff2",
-  display: 'swap',
-  weight: '600',
-})
 
 interface About {
   id: number;
@@ -38,7 +27,7 @@ const abouts: About[] = [
             <a href={about.url} target='_blank'>
         <div className={styles.innerContainer}>
           <div className={styles.number}>{about.year}</div> 
-          <div className={`${styles.content} ${sfMid.className}`}>{about.place}</div> 
+          <div className={`${styles.content} ${"Medium"}`}>{about.place}</div> 
           <div className={styles.content}>{about.position}</div> 
         </div>
         </a>
@@ -49,7 +38,7 @@ const abouts: About[] = [
 
 const About: React.FC = () => { 
   return (
-    <div className={`${styles.box} ${sfRegular.className}`}>
+    <div className={`${styles.box} ${"Regular"}`}>
       <div className={styles.grid}>
         {abouts.map((about) => (
           <AboutItem key={about.id} about={about} />
