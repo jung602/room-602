@@ -1,7 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-
-/**import localFont from 'next/font/local'
+import localFont from 'next/font/local'
  
 const sfRounded = localFont({
   preload: true,
@@ -24,7 +23,7 @@ const sfRounded = localFont({
     },
   ],
   variable: '--font-sfRounded'
-})*/
+})
 
 export const metadata: Metadata = {
   title: 'Room602',
@@ -37,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={`${sfRounded.variable} font-sans`}>
+      <body className={sfRounded.className}>
       {children}
       </body>
     </html>
