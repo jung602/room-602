@@ -20,7 +20,7 @@
     @supports (-webkit-touch-callout: none) {
         max-height: 100dvh;
       }
-    cursor: url("./cursor.svg") 32 32, auto;
+    cursor: url("/cursor.svg") 32 32, auto;
     transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1);
     overflow: hidden;
     text-align: center;
