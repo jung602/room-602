@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <>
-      <main className={`${sassy.main} ${"Medium"}` }>
+      <main className={`${sassy.main} ${"SemiBold"}` }>
             <div className={sassy.top}>
               <div>
                 <div className={sassy.image}>
