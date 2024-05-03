@@ -16,4 +16,12 @@ module.exports = {
     process.env.NODE_ENV === "production"
       ? "https://jung602.github.io/room-602"
       : "",
+  async rewrites() {
+        return [
+          {
+            source: '/api/:path*',
+            destination: 'https://erin-jung.com/:path*',
+          },
+        ]
+      },
 };
