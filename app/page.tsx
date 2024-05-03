@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import './globals.css'
 import sassy from './sassy.module.scss'
