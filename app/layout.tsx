@@ -1,8 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
+
+/**import localFont from 'next/font/local'
  
 const sfRounded = localFont({
+  preload: true,
+  display: 'swap',
   src: [
     {
       path: './fonts/SF-Rounded-Regular.woff2',
@@ -21,7 +24,7 @@ const sfRounded = localFont({
     },
   ],
   variable: '--font-sfRounded'
-})
+})*/
 
 export const metadata: Metadata = {
   title: 'Room602',
@@ -35,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${sfRounded.variable} font-sans`}>
+      <body>
       {children}
       </body>
     </html>

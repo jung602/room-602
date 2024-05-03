@@ -31,23 +31,46 @@ section {
 }
 
 body{
-
   cursor: url("/cursor.svg") 32 32, auto;
   background-color:#E5E5E5;
 }
 
+@font-face {
+  unicode-range: U+0000-00FF;
+  font-family: 'sfRounded-Regular';
+  src: url("/fonts/SF-Rounded-Regular.woff2") format('woff2');
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  unicode-range: U+0000-00FF;
+  font-family: 'sfRounded-Medium';
+  src: url("/fonts/SF-Rounded-Medium.woff2") format('woff2');
+  font-display: swap;
+  font-weight: 500;
+}
+
+@font-face {
+  unicode-range: U+0000-00FF;
+  font-family: 'sfRounded-SemiBold';
+  src: url("/fonts/SF-Rounded-SemiBold.woff2") format('woff2');
+  font-display: swap;
+  font-weight: 600;
+}
+
 .Regular{
-  font-family: var(--font-sfRounded);
+  font-family: 'sfRounded-Regular';
   font-weight: 400;
 }
 
 .Medium{
-  font-family: var(--font-sfRounded);
+  font-family: 'sfRounded-Medium';
   font-weight: 500;
 }
 
 .Semibold{
-  font-family: var(--font-sfRounded);
+  font-family: 'sfRounded-SemiBold';
   font-weight: 600;
 }
 
