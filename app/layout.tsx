@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 const sfRounded = localFont({
   src: "./fonts/SF-Pro-Rounded-Semibold.otf",
   display: 'swap',
+  weight: '600',
 })
 
 export const metadata: Metadata = {

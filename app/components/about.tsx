@@ -5,10 +5,12 @@ import styles from './about.module.scss';
 const sfRegular = localFont({
   src: './fonts/SF-Pro-Rounded-Medium.otf',
   display: 'swap',
+  weight: '500',
 })
 const sfMid= localFont({
   src: './fonts/SF-Pro-Rounded-Semibold.otf',
   display: 'swap',
+  weight: '600',
 })
 
 interface About {

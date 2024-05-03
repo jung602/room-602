@@ -7,6 +7,7 @@ import localFont from 'next/font/local';
 const sfMid= localFont({
   src: './fonts/SF-Pro-Rounded-Semibold.otf',
   display: 'swap',
+  weight: '600'
 })
 
 
