@@ -5,7 +5,7 @@ import PngSequenceAnimation from './pngSquence'
 import localFont from 'next/font/local';
 
 const sfMid= localFont({
-  src: 'SF-Pro-Rounded-Semibold.otf',
+  src: './fonts/SF-Pro-Rounded-Semibold.otf',
   display: 'swap',
 })
 
