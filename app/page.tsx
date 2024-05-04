@@ -16,7 +16,7 @@ export default function Home() {
       <Head>
 
           <title>Room602</title>
-          <link rel="icon" href="https://erin-jung.com/favicon.ico" sizes="any" />
+          <link rel="icon" href="https://erin-jung.com/favicon.ico?v=2" sizes="any" />
           <meta name="title" content="Room602" />
           <meta name="description" content="Virtual Designer Based in Delulu" />
 

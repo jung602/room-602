@@ -37,7 +37,8 @@ body{
 
 @font-face {
   font-family: "SF Pro Rounded S";
-  src: url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.woff2")format("woff2");
+  src: url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.eot");
+  src: url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.eot?#iefix")format("embedded-opentype");
 }
 
 @font-face {
