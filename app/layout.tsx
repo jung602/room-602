@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://erin-jung.com/',
     images: 'https://erin-jung.com/og.jpg'
+  },
+  icons: {
+    icon: "https://erin-jung.com/favicon.ico",
   }
 }
 
