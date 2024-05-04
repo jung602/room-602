@@ -25,7 +25,7 @@ const sfRounded = localFont({
     },
   ],
   variable: '--font-sfRounded'
-}) */
+}) 
 
 export const metadata: Metadata = {
   title: 'Room602',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: 'https://erin-jung.com/',
     images: '/og.jpg'
   }
-}
+}*/
 
 export default function RootLayout({
   children,
@@ -50,6 +50,7 @@ export default function RootLayout({
       <Head>
 
         <title>Room602</title>
+        <link rel="icon" href="https://erin-jung.com/favicon.ico" sizes="any" />
         <meta name="title" content="Room602" />
         <meta name="description" content="Virtual Designer Based in Delulu" />
 
