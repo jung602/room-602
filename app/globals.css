@@ -37,13 +37,12 @@ body{
 
 @font-face {
   font-family: "SF Pro Rounded S";
-  font-weight: 600;
-  src: url("https://db.onlinewebfonts.com/t/060fd297f19446447a9a1325ad5b889b.eot");
-  src: url("https://db.onlinewebfonts.com/t/060fd297f19446447a9a1325ad5b889b.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/060fd297f19446447a9a1325ad5b889b.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/060fd297f19446447a9a1325ad5b889b.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/060fd297f19446447a9a1325ad5b889b.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/060fd297f19446447a9a1325ad5b889b.svg#SF Pro Rounded")format("svg");
+  src: url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.eot");
+  src: url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.svg#SF Pro Rounded")format("svg");
 }
 
 @font-face {
