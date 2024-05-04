@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName:'Room602',
     type: 'website',
     url: 'https://erin-jung.com/',
-    images: 'https://erin-jung.com//og.jpg'
+    images: 'https://erin-jung.com/og.jpg'
   }
 }
 
