@@ -41,8 +41,10 @@ body{
   src: url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.eot?#iefix")format("embedded-opentype"),
   url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.woff2")format("woff2"),
   url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.svg#SF Pro Rounded")format("svg");
+  url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.ttf")format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
 }
 
 @font-face {
@@ -51,8 +53,10 @@ body{
   src: url("https://db.onlinewebfonts.com/t/c308bda9ff13c5239c99b48dc147bde0.eot?#iefix")format("embedded-opentype"),
   url("https://db.onlinewebfonts.com/t/c308bda9ff13c5239c99b48dc147bde0.woff2")format("woff2"),
   url("https://db.onlinewebfonts.com/t/c308bda9ff13c5239c99b48dc147bde0.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/c308bda9ff13c5239c99b48dc147bde0.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/c308bda9ff13c5239c99b48dc147bde0.svg#SF Pro Rounded")format("svg");
+  url("https://db.onlinewebfonts.com/t/c308bda9ff13c5239c99b48dc147bde0.ttf")format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
 }
 
 @font-face {
@@ -61,8 +65,10 @@ body{
   src: url("https://db.onlinewebfonts.com/t/32503dccd02ba31038f9061808776f55.eot?#iefix")format("embedded-opentype"),
   url("https://db.onlinewebfonts.com/t/32503dccd02ba31038f9061808776f55.woff2")format("woff2"),
   url("https://db.onlinewebfonts.com/t/32503dccd02ba31038f9061808776f55.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/32503dccd02ba31038f9061808776f55.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/32503dccd02ba31038f9061808776f55.svg#SF Pro Rounded")format("svg");
+  url("https://db.onlinewebfonts.com/t/32503dccd02ba31038f9061808776f55.ttf")format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
 }
 
 .Regular{
