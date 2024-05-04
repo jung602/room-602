@@ -1,11 +1,24 @@
 'use client'
 
-import Head from 'next/head'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import './globals.css'
 import sassy from './sassy.module.scss'
 import React, { useState, useEffect } from "react";
 import { MagneticTabs } from './components/menu'
+
+export const metadata: Metadata = {
+  title: 'Room602',
+  description: 'Virtual Designer Based in Delulu',
+  openGraph: {
+    title: 'Room602',
+    description: 'Virtual Designer Based in Delulu',
+    siteName:'Room602',
+    type: 'website',
+    url: 'https://erin-jung.com/',
+    images: 'https://erin-jung.com//og.jpg'
+  }
+}
 
 export default function Home() {
   const [activeTabId, setActiveTabId] = useState<number | null>(null);
@@ -13,26 +26,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-
-          <title>Room602</title>
-          <link rel="icon" href="https://erin-jung.com/favicon.ico?v=2" sizes="any" />
-          <meta name="title" content="Room602" />
-          <meta name="description" content="Virtual Designer Based in Delulu" />
-
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://erin-jung.com/" />
-          <meta property="og:title" content="Room602" />
-          <meta property="og:description" content="Virtual Designer Based in Delulu" />
-          <meta property="og:image" content="https://erin-jung.com/og.jpg" />
-
-          <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://erin-jung.com/" />
-          <meta property="twitter:title" content="Room602" />
-          <meta property="twitter:description" content="Virtual Designer Based in Delulu" />
-          <meta property="twitter:image" content="https://erin-jung.com/og.jpg" />
-
-      </Head>
       <main className={`${sassy.main} ${"Semibold"}` }>
             <div className={sassy.top}>
               <div>
