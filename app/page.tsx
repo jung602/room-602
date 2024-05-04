@@ -1,24 +1,11 @@
 'use client'
 
-import type { Metadata } from 'next'
 import Image from 'next/image'
 import './globals.css'
 import sassy from './sassy.module.scss'
 import React, { useState, useEffect } from "react";
 import { MagneticTabs } from './components/menu'
 
-export const metadata: Metadata = {
-  title: 'Room602',
-  description: 'Virtual Designer Based in Delulu',
-  openGraph: {
-    title: 'Room602',
-    description: 'Virtual Designer Based in Delulu',
-    siteName:'Room602',
-    type: 'website',
-    url: 'https://erin-jung.com/',
-    images: 'https://erin-jung.com//og.jpg'
-  }
-}
 
 export default function Home() {
   const [activeTabId, setActiveTabId] = useState<number | null>(null);
@@ -27,6 +14,7 @@ export default function Home() {
   return (
     <>
       <main className={`${sassy.main} ${"Semibold"}` }>
+        <Image src='./og.jpg' alt='og' width='0' height='0' />
             <div className={sassy.top}>
               <div>
                 <div className={sassy.image}>
