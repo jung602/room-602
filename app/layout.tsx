@@ -29,6 +29,9 @@ const sfRounded = localFont({
 export const metadata: Metadata = {
   title: 'Room602',
   description: 'Virtual Designer Based in Seoul',
+  openGraph: {
+    images: '/og.jpg'
+  },
 }
 
 export default function RootLayout({
