@@ -48,7 +48,7 @@ const handleMouseLeave = () => {
 
   return (
     <div 
-    className={styles.container}>
+    className={`${styles.container} ${"Semibold"}`}>
     <div
       ref={cardRef}
       className={`${styles.card} ${isActive ? styles.cardActive : ''}`}
