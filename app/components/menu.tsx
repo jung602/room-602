@@ -158,7 +158,7 @@ import ThreeDCard from "./trainerCard";
                       opacity: hoverPosition.opacity
                     }}
                 >
-                      <div className={`${styles.tabtext} ${"SemiBold"}`}>
+                      <div className={`${styles.tabtext} ${"Bold"}`}>
                         {item.text}
                         <div
                           ref={contentRef}
