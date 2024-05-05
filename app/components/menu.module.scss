@@ -85,8 +85,8 @@
         background: linear-gradient(170deg, #FFA7A6 100%, #FFB7B8 100%);
 
         .tabtext {
-          letter-spacing: 0px;
-          word-spacing: 0px;
+          letter-spacing: -0.03em;
+          word-spacing: -0.03em;
           font-size: 92px;
           text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 0px black;
           color: #4F2829; // text-zinc-600 in Tailwind
@@ -98,6 +98,7 @@
            }
 
            @media (max-width: 652px) {
+            text-shadow: .5px .5px 1px rgba(255, 255, 255, 0.3), -.5px -.5px 0px black;
             font-size: 62px;
             line-height: 64px;
              width: 280px;
@@ -106,9 +107,7 @@
 
           @media (max-width: 464px) {
             font-size: 48px;
-            letter-spacing: -0.03em;
-            word-spacing: -0.03em;
-            text-shadow: .5px .5px 1px rgba(255, 255, 255, 0.3), -.5px -.5px 0px black;
+
             line-height: 48px;
             width: 210px;
            }
@@ -130,8 +129,8 @@
         background: linear-gradient(170deg, #00a3ff 70%, rgb(60, 202, 248) 100%);
 
         .tabtext {
-          letter-spacing: 0px;
-          word-spacing: 0px;
+          letter-spacing: -0.03em;
+          word-spacing: -0.03em;
           font-size: 92px;
           text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 0px black;
           color: #00285c; // text-zinc-600 in Tailwind
@@ -149,15 +148,14 @@
            }
 
            @media (max-width: 652px) {
+            text-shadow: .5px .5px 1px rgba(255, 255, 255, 0.3), -.5px -.5px 0px black;
             font-size: 64px;
             line-height: 64px;
             width: 394px;
            }
 
           @media (max-width: 464px) {
-            text-shadow: .5px .5px 1px rgba(255, 255, 255, 0.3), -.5px -.5px 0px black;
-            letter-spacing: -0.03em;
-            word-spacing: -0.03em;
+
             font-size: 48px;
             line-height: 48px;
             width: 294px;
@@ -177,8 +175,8 @@
         background: linear-gradient(170deg, #FF5A25 70%, #FE774D 100%);
         
         .tabtext {
-          letter-spacing: 0px;
-          word-spacing: 0px;
+          letter-spacing: -0.03em;
+          word-spacing: -0.03em;
           font-size: 92px;
           text-shadow: 1.5px 1.5px 2px rgba(255, 255, 255, 0.3), -1px -1px 0px #461302;
           color: #6B1D03; // text-zinc-600 in Tailwind
@@ -195,6 +193,7 @@
            }
 
            @media (max-width: 652px) {
+            text-shadow: .5px .5px 1px rgba(255, 255, 255, 0.3), -.5px -.5px 0px black;
             font-size: 64px;
             line-height: 64px;
             width: 275px;
@@ -202,10 +201,8 @@
           
            @media (max-width: 464px) {
             font-size: 48px;
-            text-shadow: .5px .5px 1px rgba(255, 255, 255, 0.3), -.5px -.5px 0px black;
             line-height: 48px;
-            letter-spacing: -0.03em;
-            word-spacing: -0.03em;
+
             width: 208px;
            }
 
@@ -226,8 +223,8 @@
         background: linear-gradient(170deg, #FAC02B 70%, #FAC747 100%);
 
         .tabtext {
-          letter-spacing: 0px;
-          word-spacing: 0px;
+          letter-spacing: -0.03em;
+          word-spacing: -0.03em;
           font-size: 92px;
           text-shadow: 1.5px 1.5px 2px rgba(255, 255, 255, 0.3), -1px -1px 0px black;
           color: #4B3501; // text-zinc-600 in Tailwind
@@ -238,15 +235,14 @@
            }
            
            @media (max-width: 652px) {
+            text-shadow: .5px .5px 1px rgba(255, 255, 255, 0.3), -.5px -.5px 0px black;
             font-size: 64px;
             line-height: 64px;
           }
 
           @media (max-width: 464px) {
             font-size: 48px;
-            letter-spacing: -0.03em;
-            word-spacing: -0.03em;
-            text-shadow: .5px .5px 1px rgba(255, 255, 255, 0.3), -.5px -.5px 0px black;
+
             line-height: 48px;
            }
 

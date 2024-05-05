@@ -44,8 +44,8 @@ body{
   url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.ttf")format("truetype");
   font-weight: normal;
   font-style: normal;
-  letter-spacing: 0px;
-  word-spacing: 0px;
+  letter-spacing: -0.03em;
+  word-spacing: -0.03em;
 }
 
 @font-face {
@@ -57,8 +57,8 @@ body{
   url("https://db.onlinewebfonts.com/t/c308bda9ff13c5239c99b48dc147bde0.ttf")format("truetype");
   font-weight: normal;
   font-style: normal;
-  letter-spacing: 0px;
-  word-spacing: 0px;
+  letter-spacing: -0.03em;
+  word-spacing: -0.03em;
 }
 
 @font-face {
@@ -70,8 +70,8 @@ body{
   url("https://db.onlinewebfonts.com/t/32503dccd02ba31038f9061808776f55.ttf")format("truetype");
   font-weight: normal;
   font-style: normal;
-  letter-spacing: 0px;
-  word-spacing: 0px;
+  letter-spacing: -0.03em;
+  word-spacing: -0.03em;
 }
 
 .Regular{
