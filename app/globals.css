@@ -48,25 +48,17 @@ body{
 
 @font-face {
   font-family: "SF Pro Rounded B";
-  src: url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.eot");
-  src: url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/c8c787212fa5e3ccd47fedb8dcd705e6.svg#SF Pro Rounded")format("svg");
+  src: url("./fonts/SF-Rounded-SemiBold.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
   letter-spacing: 0px;
   word-spacing: 0px;
 }
 
 @font-face {
   font-family: "SF Pro Rounded M";
-  src: url("https://db.onlinewebfonts.com/t/c308bda9ff13c5239c99b48dc147bde0.eot");
-  src: url("https://db.onlinewebfonts.com/t/c308bda9ff13c5239c99b48dc147bde0.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/c308bda9ff13c5239c99b48dc147bde0.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/c308bda9ff13c5239c99b48dc147bde0.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/c308bda9ff13c5239c99b48dc147bde0.ttf")format("truetype");
+  src: url("./fonts/SF-Rounded-Medium.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
