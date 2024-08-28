@@ -6,21 +6,20 @@ import localFont from '@next/font/local'
 const sfRounded = localFont({
   src: [
     {
-      path: '../public/fonts/SF-Rounded-Regular.woff2',
+      path: './fonts/SF-Rounded-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../public/fonts/SF-Rounded-Medium.woff2',
+      path: './fonts/SF-Rounded-Medium.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: '../public/fonts/SF-Rounded-SemiBold.woff2',
+      path: './fonts/SF-Rounded-SemiBold.woff2',
       weight: '600',
       style: 'normal',
-    },
-    // 다른 weight나 style이 있다면 여기에 추가하세요
+    }
   ],
   variable: '--font-sf-rounded'
 })
