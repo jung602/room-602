@@ -30,75 +30,39 @@ section {
   display: block;
 }
 
+:root {
+  --font-sf-rounded: SF_Rounded, sans-serif;
+}
+
 body{
+  font-family: var(--font-sf-rounded);
   cursor: url("/cursor.svg") 32 32, auto;
   background-color:#E5E5E5;
 }
 
-@font-face {
-  font-family: "SF Pro Rounded S";
-  src: url("./fonts/SF-Rounded-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  letter-spacing: 0px;
-  word-spacing: 0px;
-}
-
-
-@font-face {
-  font-family: "SF Pro Rounded B";
-  src: url("./fonts/SF-Rounded-SemiBold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  letter-spacing: 0px;
-  word-spacing: 0px;
-}
-
-@font-face {
-  font-family: "SF Pro Rounded M";
-  src: url("./fonts/SF-Rounded-Medium.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  letter-spacing: 0px;
-  word-spacing: 0px;
-}
-
-@font-face {
-  font-family: "SF Pro Rounded R";
-  src: url("./fonts/SF-Rounded-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  letter-spacing: 0px;
-  word-spacing: 0px;
-}
-
 .Regular{
-  font-family: "SF Pro Rounded R";
+  font-family: var(--font-sf-rounded);
   font-weight: 400;
   letter-spacing: 0px;
   word-spacing: 0px;
 }
 
 .Medium{
-  font-family: "SF Pro Rounded M";
+  font-family: var(--font-sf-rounded);
   font-weight: 500;
   letter-spacing: 0px;
   word-spacing: 0px;
 }
 
 .Semibold{
-  font-family: "SF Pro Rounded S";
+  font-family: var(--font-sf-rounded);
   font-weight: 600;
   letter-spacing: 0px;
   word-spacing: 0px;
 }
 
 .Bold{
-  font-family: "SF Pro Rounded B";
+  font-family: var(--font-sf-rounded);
   font-weight: 600;
   letter-spacing: 0px;
   word-spacing: 0px;

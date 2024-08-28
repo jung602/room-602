@@ -1,30 +1,29 @@
 import './globals.css'
 import type { Metadata } from 'next'
-/**
-import localFont from 'next/font/local'
+import { Inter } from 'next/font/google'
+import localFont from '@next/font/local'
  
 const sfRounded = localFont({
-  preload: true,
-  display: 'swap',
   src: [
     {
-      path: './fonts/SF-Rounded-Regular.woff2',
+      path: './public/fonts/SF-Rounded-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './fonts/SF-Rounded-Medium.woff2',
+      path: './public/fonts/SF-Rounded-Medium.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: './fonts/SF-Rounded-SemiBold.woff2',
+      path: './public/fonts/SF-Rounded-SemiBold.woff2',
       weight: '600',
       style: 'normal',
     },
+    // 다른 weight나 style이 있다면 여기에 추가하세요
   ],
-  variable: '--font-sfRounded'
-}) */
+  variable: '--font-sf-rounded'
+})
 
 export const metadata: Metadata = {
   title: 'Room602',
@@ -48,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={sfRounded.variable}>
       <body>
       {children}
       </body>
