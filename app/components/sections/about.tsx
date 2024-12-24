@@ -9,9 +9,14 @@ const abouts: About[] = [
 
 const AboutItem: React.FC<AboutItemProps> = ({ about }) => {
   return (
-
       <div className={styles.container}>
-            <a href={about.url} target='_blank'>
+            <a 
+              href={about.url} 
+              target='_blank'
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+            >
         <div className={styles.innerContainer}>
           <div className={styles.number}>{about.year}</div> 
           <div className={`${styles.content} ${"Medium"}`}>{about.place}</div> 

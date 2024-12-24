@@ -1,7 +1,7 @@
 /* Font imports */
-@import url("https://db.onlinewebfonts.com/c/32503dccd02ba31038f9061808776f55?family=SF+Pro+Rounded");  /* Regular */
-@import url("https://db.onlinewebfonts.com/c/c308bda9ff13c5239c99b48dc147bde0?family=SF+Pro+Rounded");  /* Medium */
-@import url("https://db.onlinewebfonts.com/c/060fd297f19446447a9a1325ad5b889b?family=SF+Pro+Rounded");  /* Semibold */
+@import url("https://db.onlinewebfonts.com/c/32503dccd02ba31038f9061808776f55?family=SF+Pro+Rounded+Regular");
+@import url("https://db.onlinewebfonts.com/c/c308bda9ff13c5239c99b48dc147bde0?family=SF+Pro+Rounded+Medium");
+@import url("https://db.onlinewebfonts.com/c/060fd297f19446447a9a1325ad5b889b?family=SF+Pro+Rounded+Semibold");
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -23,7 +23,7 @@
 :root {
   --base-letter-spacing: -0.02em;
   --mobile-letter-spacing: -0.01em;
-  --font-sfRounded: "SF Pro Rounded", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-sfRounded: "SF Pro Rounded Regular", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 html {
@@ -44,22 +44,26 @@ body {
 
 /* Typography Classes */
 .Regular {
-  font-weight: 400;
+  font-family: "SF Pro Rounded Regular", system-ui, sans-serif;
+  font-weight: normal;
   letter-spacing: inherit;
 }
 
 .Medium {
-  font-weight: 500;
+  font-family: "SF Pro Rounded Medium", system-ui, sans-serif;
+  font-weight: normal;
   letter-spacing: inherit;
 }
 
 .Semibold {
-  font-weight: 600;
+  font-family: "SF Pro Rounded Semibold", system-ui, sans-serif;
+  font-weight: normal;
   letter-spacing: inherit;
 }
 
 .Bold {
-  font-weight: 600;
+  font-family: "SF Pro Rounded Semibold", system-ui, sans-serif;
+  font-weight: normal;
   letter-spacing: inherit;
 }
 
