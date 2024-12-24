@@ -21,8 +21,9 @@ const sfRounded = localFont({
     }
   ],
   variable: '--font-sf',
-  display: 'swap',
+  display: 'block',
   preload: true,
+  fallback: ['system-ui', 'arial'],
 })
 
 export const metadata: Metadata = {
@@ -48,6 +49,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={sfRounded.variable}>
+      <head>
+        <link
+          rel="preload"
+          href="https://jung602.github.io/room-602/_next/static/media/SF-Rounded-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="https://jung602.github.io/room-602/_next/static/media/SF-Rounded-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="https://jung602.github.io/room-602/_next/static/media/SF-Rounded-SemiBold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         {children}
       </body>

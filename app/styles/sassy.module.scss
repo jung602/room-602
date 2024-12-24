@@ -20,7 +20,7 @@
     @supports (-webkit-touch-callout: none) {
         max-height: 100dvh;
       }
-    cursor: url("/room-602/cursor.svg") 32 32, auto;
+    cursor: url("https://jung602.github.io/room-602/cursor.svg") 32 32, auto;
     transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1);
     overflow: hidden;
     text-align: center;
@@ -28,6 +28,7 @@
     -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
     touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .main::-webkit-scrollbar {

@@ -13,8 +13,9 @@ const nextConfig = {
   trailingSlash: true,
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
-      // 프로덕션 빌드에서만 적용
-      config.output.publicPath = `/room-602${config.output.publicPath}`;
+      Object.assign(config.resolve.alias, {
+        '/room-602': '',
+      });
     }
     return config;
   },
@@ -25,21 +26,33 @@ const nextConfig = {
         headers: [
           {
             key: 'Access-Control-Allow-Origin',
-            value: '*',
+            value: 'https://erin-jung.com',
           },
           {
             key: 'Access-Control-Allow-Methods',
-            value: 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
+            value: 'GET',
           },
           {
             key: 'Access-Control-Allow-Headers',
-            value: 'X-Requested-With, Content-Type, Authorization',
+            value: '*',
           },
         ],
       },
       {
         source: '/_next/static/media/:path*',
         headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: 'https://erin-jung.com',
+          },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET',
+          },
+          {
+            key: 'Access-Control-Allow-Headers',
+            value: '*',
+          },
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
