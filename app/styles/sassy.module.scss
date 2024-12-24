@@ -20,13 +20,14 @@
     @supports (-webkit-touch-callout: none) {
         max-height: 100dvh;
       }
-    cursor: url("/cursor.svg") 32 32, auto;
-    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1);
+    cursor: url("/room-602/cursor.svg") 32 32, auto;
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1);
     overflow: hidden;
     text-align: center;
-    scrollbar-width: none; /* 스크롤바를 숨김 */
-    -ms-overflow-style: none; /* 스크롤바를 숨김 */
-
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: manipulation;
 }
 
 .main::-webkit-scrollbar {
@@ -67,6 +68,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .bottom {

@@ -101,13 +101,24 @@ const MagneticTab = memo(({ item, isActive, toggleTab }: MagneticTabProps) => {
     }
   }, [isClicked]);
 
-  const handleClick = useCallback(() => {
+  const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
     toggleTab(item.id);
     setIsClicked(!isClicked);
+    if (typeof window !== 'undefined') {
+      window.requestAnimationFrame(() => {
+        setHoverPosition({ x: 0, y: 0, opacity: 1 });
+      });
+    }
   }, [toggleTab, item.id, isClicked]);
 
   useEffect(() => {
     setIsClicked(false);
+    const cleanup = () => {
+      setHoverPosition({ x: 0, y: 0, opacity: 1 });
+    };
+    return cleanup;
   }, [isActive]);
 
   const buttonClassName = `${styles.tab} ${
