@@ -17,17 +17,19 @@ const nextConfig = {
       Object.assign(config.resolve.alias, {
         '/room-602': path.resolve(__dirname, 'public'),
       });
-      
-      config.module.rules.push({
-        test: /\.(woff2)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'static/media/[name][ext]'
-        }
-      });
     }
+    
+    // Font file handling
+    config.module.rules.push({
+      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      type: 'asset/resource',
+      generator: {
+        filename: 'static/fonts/[name][ext]'
+      }
+    });
+    
     return config;
-  },
+  }
 };
 
 module.exports = nextConfig;

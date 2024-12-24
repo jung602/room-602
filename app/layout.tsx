@@ -20,7 +20,7 @@ const sfRounded = localFont({
       style: 'normal',
     }
   ],
-  variable: '--font-sf',
+  variable: '--font-sfRounded',
   display: 'swap',
   preload: true,
   fallback: ['system-ui', 'arial'],
@@ -49,31 +49,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={sfRounded.variable}>
-      <head>
-        <style dangerouslySetInnerHTML={{ __html: `
-          @font-face {
-            font-family: 'SF Pro Rounded';
-            src: url('https://jung602.github.io/room-602/fonts/SF-Rounded-Regular.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
-          }
-          @font-face {
-            font-family: 'SF Pro Rounded';
-            src: url('https://jung602.github.io/room-602/fonts/SF-Rounded-Medium.woff2') format('woff2');
-            font-weight: 500;
-            font-style: normal;
-            font-display: swap;
-          }
-          @font-face {
-            font-family: 'SF Pro Rounded';
-            src: url('https://jung602.github.io/room-602/fonts/SF-Rounded-SemiBold.woff2') format('woff2');
-            font-weight: 600;
-            font-style: normal;
-            font-display: swap;
-          }
-        ` }} />
-      </head>
       <body>
         {children}
       </body>

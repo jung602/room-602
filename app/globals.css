@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  font-family: var(--font-sf);
+  font-family: var(--font-sfRounded);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
