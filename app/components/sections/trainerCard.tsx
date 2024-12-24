@@ -1,14 +1,8 @@
 import React, { useRef, useState, MouseEvent } from 'react';
-import styles from './trainercard.module.scss';
+import styles from '../../styles/sections/trainercard.module.scss';
 import Image from 'next/image';
-import PngSequenceAnimation from './pngSquence'
-
-
-
-interface ThreeDCardProps {
-  onCardToggle: (isActive: boolean) => void; // 부모 컴포넌트로 상태 변경을 알리는 함수
-}
-
+import PngSequenceAnimation from '../utils/pngSquence';
+import { ThreeDCardProps } from '../../types/sections/trainerCard';
 
 const ThreeDCard: React.FC<ThreeDCardProps> = ({ onCardToggle }) => {
   const cardRef = useRef<HTMLDivElement>(null);

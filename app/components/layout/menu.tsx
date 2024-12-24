@@ -1,57 +1,37 @@
 import React, { useRef, useState, useEffect, useCallback, memo } from "react";
-import styles from './menu.module.scss';
-import About from './about';
-import Contact from './contact';
-import Skills from "./skills";
-import ThreeDCard from "./trainerCard";
-
-// Types
-interface TabItem {
-  id: number;
-  text: string;
-}
-
-interface MagneticTabProps {
-  item: TabItem;
-  isActive: boolean;
-  toggleTab: (id: number) => void;
-}
-
-// Constants
-const TABS: readonly TabItem[] = [
-  { id: 1, text: "Erin Jung" },
-  { id: 2, text: "Design ⊕ Development" },
-  { id: 3, text: "Pokemon Trainer" },
-  { id: 4, text: "Contact" },
-] as const;
-
-// Utils
-const isMobileDevice = (): boolean => {
-  if (typeof window === 'undefined') return false;
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-};
+import styles from '../../styles/layout/menu.module.scss';
+import About from '../sections/about';
+import Contact from '../sections/contact';
+import Skills from "../sections/skills";
+import ThreeDCard from "../sections/trainerCard";
+import { TabItem, MagneticTabProps, TabContentProps, MagneticTabsProps } from '../../types/layout/menu';
+import { TABS } from '../../constants/layout/menu';
+import { isMobileDevice } from '../../utils/device';
+import { FONT_WEIGHTS, TAB_POSITIONS } from '../../constants/styles';
+import { ErrorBoundary } from '../ErrorBoundary';
 
 // TabContent Component
-const TabContent = memo(({ text, isActive, onCardToggle, resetKey }: { 
-  text: string; 
-  isActive: boolean; 
-  onCardToggle: ((isActive: boolean) => void) | undefined;
-  resetKey?: number;
-}) => {
+const TabContent = memo(({ text, isActive, onCardToggle, resetKey }: TabContentProps) => {
   if (!isActive) return null;
   
-  switch(text) {
-    case 'Erin Jung':
-      return <About />;
-    case 'Design ⊕ Development':
-      return <Skills key={resetKey} />;
-    case 'Pokemon Trainer':
-      return onCardToggle ? <ThreeDCard key={resetKey} onCardToggle={onCardToggle} /> : null;
-    case 'Contact':
-      return <Contact />;
-    default:
-      return null;
-  }
+  return (
+    <ErrorBoundary>
+      {(() => {
+        switch(text) {
+          case 'Erin Jung':
+            return <About />;
+          case 'Design ⊕ Development':
+            return <Skills key={resetKey} />;
+          case 'Pokemon Trainer':
+            return onCardToggle ? <ThreeDCard key={resetKey} onCardToggle={onCardToggle} /> : null;
+          case 'Contact':
+            return <Contact />;
+          default:
+            return null;
+        }
+      })()}
+    </ErrorBoundary>
+  );
 });
 
 TabContent.displayName = 'TabContent';
@@ -135,7 +115,7 @@ const MagneticTab = memo(({ item, isActive, toggleTab }: MagneticTabProps) => {
   } ${isActive ? styles.active : ''}`;
 
   const tabClassName = `${styles.tabbackground} ${
-    styles[`${['first', 'second', 'third', 'fourth'][item.id - 1]}Tab`]
+    styles[`${TAB_POSITIONS[item.id - 1]}Tab`]
   }`;
 
   return (
@@ -145,6 +125,8 @@ const MagneticTab = memo(({ item, isActive, toggleTab }: MagneticTabProps) => {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         onClick={handleClick}
+        aria-expanded={isActive}
+        aria-controls={`tab-content-${item.id}`}
       >
         <div
           className={tabClassName}
@@ -153,9 +135,10 @@ const MagneticTab = memo(({ item, isActive, toggleTab }: MagneticTabProps) => {
             opacity: hoverPosition.opacity
           }}
         >
-          <div className={`${styles.tabtext} Bold`}>
+          <div className={`${styles.tabtext} ${FONT_WEIGHTS.BOLD}`}>
             {item.text}
             <div
+              id={`tab-content-${item.id}`}
               ref={contentRef}
               className={`${styles.tabContent} ${isActive ? styles.active : ''} ${isCardActive ? styles.cardActive : ''}`}
               style={{ 
@@ -180,10 +163,6 @@ const MagneticTab = memo(({ item, isActive, toggleTab }: MagneticTabProps) => {
 MagneticTab.displayName = 'MagneticTab';
 
 // MagneticTabs Component
-interface MagneticTabsProps {
-  setActiveTabId: React.Dispatch<React.SetStateAction<number | null>>;
-}
-
 export const MagneticTabs: React.FC<MagneticTabsProps> = memo(({ setActiveTabId }) => {
   const [activeTabId, setLocalActiveTabId] = useState<number | null>(null);
 

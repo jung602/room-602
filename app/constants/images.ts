@@ -1,0 +1,41 @@
+export const IMAGES = {
+  SKILLS: {
+    UI: './skill1.png',
+    INTERACTION: './skill2.png',
+    VIRTUAL: './skill3.png',
+    DEVELOPMENT: './skill4.png',
+  },
+  TOOLS: {
+    FIGMA: './Figma.png',
+    ADOBE_CC: './AdobeCC.png',
+    BLENDER: './Blender.png',
+    PROTOPIE: './Protopie.png',
+    AE: './AE.png',
+    FRAMER: './framer.png',
+    UNITY: './Unity.png',
+    UNREAL: './Unreal.png',
+    REACT: './React.png',
+    NEXT: './Next.png',
+    PYTHON: './python.png',
+    CSHARP: './Csharp.png',
+  },
+  CONTACT: {
+    EMAIL: './email.png',
+    READCV: './readcv.png',
+    LINKEDIN: './linkedin.png',
+  },
+  POKEMON: {
+    POKEBALL: './pokeball.png',
+    DARK: './dark.png',
+    DARK1: './dark1.png',
+    DARK2: './dark2.png',
+    DARK3: './dark3.png',
+    DARK4: './dark4.png',
+    DARK5: './dark5.png',
+    DARK6: './dark6.png',
+  },
+  MISC: {
+    OG: './og.jpg',
+    BOUNDARY: './boundary.png',
+  },
+} as const; 

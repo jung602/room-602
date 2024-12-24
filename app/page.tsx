@@ -2,9 +2,9 @@
 
 import Image from 'next/image'
 import './globals.css'
-import sassy from './sassy.module.scss'
+import sassy from './styles/sassy.module.scss'
 import React, { useState, useEffect } from "react";
-import { MagneticTabs } from './components/menu'
+import { MagneticTabs } from './components/layout/menu'
 
 
 export default function Home() {
