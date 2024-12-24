@@ -88,18 +88,22 @@
       }
     
     @media (max-width: 464px) {
-        font-size: 1rem;
+        font-size: .8rem;
         line-height: 1rem;
 
         .innerContainer{
-            height: 6rem;
+            height: 6.5rem;
+            padding: .7rem;
 
             .icon{
-                width: 30%;
+                width: 25%;
                 transform: translateX(-50%) translateY(-30%);
             }
             .number{
-                font-size: .8rem;}
+                font-size: .75rem;}
+        }
+        .adds{
+            font-size: .8rem;
         }
        }
     
