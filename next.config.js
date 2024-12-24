@@ -17,6 +17,14 @@ const nextConfig = {
       Object.assign(config.resolve.alias, {
         '/room-602': path.resolve(__dirname, 'public'),
       });
+      
+      config.module.rules.push({
+        test: /\.(woff2)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/media/[name][ext]'
+        }
+      });
     }
     return config;
   },
