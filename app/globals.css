@@ -3,7 +3,6 @@
    License: none (public domain)
 */
 
-
 * {
   margin: 0;
   padding: 0;
@@ -11,11 +10,74 @@
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
+  letter-spacing: -0.3px;
 }
-a{
+
+/* Base Typography Settings */
+:root {
+  --base-letter-spacing: -0.02em;
+  --mobile-letter-spacing: -0.01em;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sf);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: var(--base-letter-spacing);
+  cursor: url("/cursor.svg") 32 32, auto;
+  background-color: #E5E5E5;
+}
+
+/* Typography Classes */
+.Regular {
+  font-weight: 400;
+  letter-spacing: inherit;
+}
+
+.Medium {
+  font-weight: 500;
+  letter-spacing: inherit;
+}
+
+.Semibold {
+  font-weight: 600;
+  letter-spacing: inherit;
+}
+
+.Bold {
+  font-weight: 600;
+  letter-spacing: inherit;
+}
+
+/* Mobile Typography Adjustments */
+@media screen and (max-width: 768px) {
+  body {
+    letter-spacing: var(--mobile-letter-spacing);
+    word-spacing: normal;
+  }
+
+  .Regular,
+  .Medium,
+  .Semibold,
+  .Bold {
+    letter-spacing: var(--mobile-letter-spacing);
+    word-spacing: normal;
+  }
+}
+
+/* Reset Styles */
+a {
   text-decoration: none;
 }
-/* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -30,57 +92,16 @@ section {
   display: block;
 }
 
-body {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  cursor: url("/cursor.svg") 32 32, auto;
-  background-color: #E5E5E5;
-}
-
-.Regular {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 0px;
-  word-spacing: 0px;
-}
-
-.Medium {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  letter-spacing: 0px;
-  word-spacing: 0px;
-}
-
-.Semibold {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  letter-spacing: 0px;
-  word-spacing: 0px;
-}
-
-.Bold {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: 0px;
-  word-spacing: 0px;
-}
-
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -88,6 +109,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;

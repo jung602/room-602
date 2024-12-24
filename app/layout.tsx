@@ -1,5 +1,29 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import localFont from 'next/font/local'
+
+const sfRounded = localFont({
+  src: [
+    {
+      path: './fonts/SF-Rounded-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/SF-Rounded-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/SF-Rounded-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-sf',
+  display: 'swap',
+  preload: true,
+})
 
 export const metadata: Metadata = {
   title: 'Room602',
@@ -23,12 +47,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <head>
-        <style>
-          {`@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');`}
-        </style>
-      </head>
+    <html lang="en" className={sfRounded.variable}>
       <body>
         {children}
       </body>
