@@ -180,16 +180,23 @@ const MagneticTab = memo(({ item, isActive, toggleTab }: MagneticTabProps) => {
 MagneticTab.displayName = 'MagneticTab';
 
 // MagneticTabs Component
-export const MagneticTabs: React.FC = memo(() => {
-  const [activeTabId, setActiveTabId] = useState<number | null>(null);
+interface MagneticTabsProps {
+  setActiveTabId: React.Dispatch<React.SetStateAction<number | null>>;
+}
+
+export const MagneticTabs: React.FC<MagneticTabsProps> = memo(({ setActiveTabId }) => {
+  const [activeTabId, setLocalActiveTabId] = useState<number | null>(null);
 
   const toggleTab = useCallback((id: number) => {
-    setActiveTabId(prev => prev === id ? null : id);
-  }, []);
+    const newValue = activeTabId === id ? null : id;
+    setLocalActiveTabId(newValue);
+    setActiveTabId(newValue);
+  }, [activeTabId, setActiveTabId]);
 
   const closeTabs = useCallback(() => {
+    setLocalActiveTabId(null);
     setActiveTabId(null);
-  }, []);
+  }, [setActiveTabId]);
 
   return (
     <div>

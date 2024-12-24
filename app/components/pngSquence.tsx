@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface PngSequenceProps {
     isActive: boolean;
@@ -7,19 +8,20 @@ interface PngSequenceProps {
 
 const PngSequenceAnimation: React.FC<PngSequenceProps> = ({ isActive, className }) => {
     const [frame, setFrame] = useState<number>(1);
-    const numFrames = 60; // 총 프레임 수 정의
-    const animationSpeed = 1000 / 30; // 30 FPS
+    const numFrames = 60;
+    const animationSpeed = 1000 / 30;
 
-    // 프리로딩 로직
     useEffect(() => {
-        for (let i = 1; i <= numFrames; i++) {
-            const img = new Image();
-            img.src = `./trainerCard/TrainerCard${i.toString().padStart(5, '0')}.png`;
-            img.onload = () => console.log(`Preloaded image ${i}`);
-        }
-    }, []);
+        const preloadImages = () => {
+            for (let i = 1; i <= numFrames; i++) {
+                const img = document.createElement('img');
+                img.src = `./trainerCard/TrainerCard${i.toString().padStart(5, '0')}.png`;
+                img.onload = () => console.log(`Preloaded image ${i}`);
+            }
+        };
+        preloadImages();
+    }, [numFrames]);
 
-    // 애니메이션 로직
     useEffect(() => {
         if (!isActive && frame < 30) {
             const timer = setTimeout(() => setFrame(frame + 1), animationSpeed);
@@ -31,13 +33,24 @@ const PngSequenceAnimation: React.FC<PngSequenceProps> = ({ isActive, className 
             const timer = setTimeout(() => setFrame(frame - 1), animationSpeed);
             return () => clearTimeout(timer);
         }
-    }, [frame, isActive]);
+    }, [frame, isActive, animationSpeed]);
 
     const formattedFrame = frame.toString().padStart(5, '0');
     const imagePath = `./trainerCard/TrainerCard${formattedFrame}.png`;
 
     return (
-        <img className={className} src={imagePath} alt={`Frame ${frame}`} />
+        <Image 
+            className={className}
+            src={imagePath} 
+            alt={`Frame ${frame}`}
+            width={1000}
+            height={1000}
+            style={{
+                maxWidth: '100%',
+                height: 'auto'
+            }}
+            priority
+        />
     );
 };
 
