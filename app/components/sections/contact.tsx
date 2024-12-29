@@ -14,6 +14,7 @@ const ContactItem: React.FC<ContactItemProps> = ({ contact }) => {
         target='_blank' 
         rel="noopener noreferrer"
         aria-label={`${contact.text} 링크 열기`}
+        onClick={(e) => e.stopPropagation()}
       >
         <div className={styles.innerContainer}>
           <div className={styles.content}>{contact.text}</div> 
