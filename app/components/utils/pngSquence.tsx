@@ -7,7 +7,7 @@ interface PngSequenceProps {
 }
 
 const PngSequenceAnimation: React.FC<PngSequenceProps> = ({ isActive, className }) => {
-    const [frame, setFrame] = useState<number>(1);
+    const [frame, setFrame] = useState<number>(40);
     const numFrames = 60;
     const animationSpeed = 1000 / 30;
 
@@ -23,13 +23,10 @@ const PngSequenceAnimation: React.FC<PngSequenceProps> = ({ isActive, className 
     }, [numFrames]);
 
     useEffect(() => {
-        if (!isActive && frame < 30) {
+        if (isActive && frame < 60) {
             const timer = setTimeout(() => setFrame(frame + 1), animationSpeed);
             return () => clearTimeout(timer);
-        } else if (isActive && frame < 60) {
-            const timer = setTimeout(() => setFrame(frame + 1), animationSpeed);
-            return () => clearTimeout(timer);
-        } else if (!isActive && frame > 30) {
+        } else if (!isActive && frame > 35) {
             const timer = setTimeout(() => setFrame(frame - 1), animationSpeed);
             return () => clearTimeout(timer);
         }
