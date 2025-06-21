@@ -7,7 +7,7 @@ interface PngSequenceProps {
 }
 
 const PngSequenceAnimation: React.FC<PngSequenceProps> = ({ isActive, className }) => {
-    const [frame, setFrame] = useState<number>(40);
+    const [frame, setFrame] = useState<number>(35);
     const numFrames = 60;
     const animationSpeed = 1000 / 30;
 

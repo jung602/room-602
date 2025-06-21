@@ -1,0 +1,21 @@
+.skeletonContainer {
+  position: relative;
+  z-index: 999;
+}
+
+.skeletonTab {
+  // 기존 탭 스타일을 덮어쓰기
+  background: #DEDEDE !important;
+  box-shadow: none !important;
+  position: relative;
+  cursor: url("/cursor.svg") 32 32, auto !important;
+  overflow: hidden !important;
+  
+}
+
+.skeletonText {
+  color: transparent !important;
+  text-shadow: none !important;
+  position: relative;
+  opacity: 0 !important;
+} 

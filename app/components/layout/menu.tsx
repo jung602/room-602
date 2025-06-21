@@ -9,6 +9,8 @@ import { TABS } from '../../constants/layout/menu';
 import { isMobileDevice } from '../../utils/device';
 import { FONT_WEIGHTS, TAB_POSITIONS } from '../../constants/styles';
 import { ErrorBoundary } from '../ErrorBoundary';
+import MenuSkeleton from './menuSkeleton';
+import { useLoadingState } from '../../hooks/useLoadingState';
 
 // TabContent Component
 const TabContent = memo(({ text, isActive, onCardToggle, resetKey }: TabContentProps) => {
@@ -176,6 +178,7 @@ MagneticTab.displayName = 'MagneticTab';
 // MagneticTabs Component
 export const MagneticTabs: React.FC<MagneticTabsProps> = memo(({ setActiveTabId }) => {
   const [activeTabId, setLocalActiveTabId] = useState<number | null>(null);
+  const { isLoading } = useLoadingState(1500);
 
   const toggleTab = useCallback((id: number) => {
     const newValue = activeTabId === id ? null : id;
@@ -187,6 +190,11 @@ export const MagneticTabs: React.FC<MagneticTabsProps> = memo(({ setActiveTabId 
     setLocalActiveTabId(null);
     setActiveTabId(null);
   }, [setActiveTabId]);
+
+  // 로딩 중일 때는 스켈레톤 표시
+  if (isLoading) {
+    return <MenuSkeleton />;
+  }
 
   return (
     <div>
