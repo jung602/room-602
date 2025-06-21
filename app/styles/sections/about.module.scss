@@ -54,11 +54,11 @@
         width: fit-content;
         height: fit-content;
         line-height: 1rem;
-        font-size: 1rem;
-        padding: .5rem .75rem;
+        font-size: 0.75rem;
+        padding: .25rem .5rem;
         background-color: #4F282970;
         color: white;
-        border-radius: 10000px;
+        border-radius: 0.5rem;
     }
 
     @media (max-width: 652px) {
@@ -67,8 +67,8 @@
 
         .innerContainer{
             .number{
+                font-size: 0.75rem;
                 padding: .25rem .5rem;
-                font-size: .75rem;
             }
         }
     }
