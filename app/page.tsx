@@ -33,7 +33,7 @@ export default function Home() {
               <MagneticTabs setActiveTabId={setActiveTabId} />
             </div>
             <div className={sassy.bottom}>
-              <div>Copyright © Erin Jung 2024</div>
+              <div>Copyright © Erin Jung 2025</div>
             </div>
       </main>
     </>
